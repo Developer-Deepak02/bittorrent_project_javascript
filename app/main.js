@@ -12,7 +12,9 @@ function decodeBencode(bencodedValue) {
       throw new Error("Invalid encoded value");
     }
     return bencodedValue.substr(firstColonIndex + 1);
-  } else {
+  } else if(bencodedValue[0] ==='i'){
+    return +bencodedValue.slice(1 , -1);
+  }  else {
     throw new Error("Only strings are supported at the moment");
   }
 }
