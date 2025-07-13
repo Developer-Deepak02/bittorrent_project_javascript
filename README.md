@@ -1,34 +1,66 @@
-[![progress-banner](https://backend.codecrafters.io/progress/bittorrent/58d7bc02-6219-48d3-97d4-45210e8d3920)](https://app.codecrafters.io/users/codecrafters-bot?r=2qF)
+📘 README.md Starter
+Here’s a full README.md you can copy or modify:
 
-This is a starting point for JavaScript solutions to the
-["Build Your Own BitTorrent" Challenge](https://app.codecrafters.io/courses/bittorrent/overview).
+markdown
+Copy
+Edit
+# 📦 BitTorrent Client in JavaScript
 
-In this challenge, you’ll build a BitTorrent client that's capable of parsing a
-.torrent file and downloading a file from a peer. Along the way, we’ll learn
-about how torrent files are structured, HTTP trackers, BitTorrent’s Peer
-Protocol, pipelining and more.
+A custom-built BitTorrent client written in JavaScript, implementing the BitTorrent protocol from scratch. This project is part of a hands-on learning initiative to understand how torrenting works at the protocol level.
 
-**Note**: If you're viewing this repo on GitHub, head over to
-[codecrafters.io](https://codecrafters.io) to try the challenge.
+## 🔍 Features
 
-# Passing the first stage
+- ✅ Parse `.torrent` files (BEncoding decoding)
+- ✅ Connect to HTTP/UDP trackers
+- ✅ Peer discovery and handshake
+- ✅ Peer wire protocol (request, piece, choke, unchoke)
+- ✅ Piece downloading and assembly
+- ❌ No GUI – CLI-based learning project
 
-The entry point for your BitTorrent implementation is in `app/main.js`. Study
-and uncomment the relevant code, and push your changes to pass the first stage:
+## 🚀 Getting Started
 
-```sh
-git commit -am "pass 1st stage" # any msg
-git push origin master
-```
+### Prerequisites
 
-Time to move on to the next stage!
+- Node.js (v18 or later recommended)
 
-# Stage 2 & beyond
+### Installation
 
-Note: This section is for stages 2 and beyond.
+```bash
+git clone https://github.com/YourUsername/bittorrent-javascript.git
+cd bittorrent-javascript
+npm install
+Run the Client
+bash
+Copy
+Edit
+node index.js <path-to-torrent-file>
+Example:
 
-1. Ensure you have `node (21)` installed locally
-1. Run `./your_program.sh` to run your program, which is implemented in
-   `app/main.js`.
-1. Commit your changes and run `git push origin master` to submit your solution
-   to CodeCrafters. Test output will be streamed to your terminal.
+bash
+Copy
+Edit
+node index.js ubuntu.torrent
+📂 Folder Structure
+bash
+Copy
+Edit
+.
+├── bencode/              # Bencoding decoder
+├── tracker/              # Tracker communication
+├── peer/                 # Peer wire protocol handling
+├── torrent-parser.js     # Torrent file parsing
+├── index.js              # Entry point
+└── README.md
+💡 Learnings
+This project helped me understand:
+
+How BitTorrent manages file sharing without a central server
+
+Binary protocols and buffer handling in Node.js
+
+Asynchronous event handling with sockets
+
+🔗 Inspired By
+CodeCrafters BitTorrent Challenge
+
+BitTorrent Protocol Specification
